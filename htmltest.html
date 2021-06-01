@@ -167,24 +167,70 @@ The alt attribute provides an altarnate text for an image, if the user for some 
 
 <h2 id="CH2">Chapter 2 Image Maps</h2>
 
-<br><br>
+<br>
 
+<!--The <map> tag defines an image map. An image map is an image with clickable areas. The areas are defined with one or mroe <area> tags.-->
+<!--The idea behind an image map is that the user should be able to perform different actions depening on where in the image you click.-->
+<!--The image is inserted using the <img> tag. The only difference from other images is that you must add a "usemap" attribute.-->
+<!--The "usemap" attribute starts with a hash tag # followed by the name of the image map, and is used to create a relation ship between the image and the image map.-->
 <img src="images/depositphotos_29460297-stock-photo-bird-cage.jpg" alt="birdcage" usemap="#birdcage" style="width: 450px;height: 330px;">
 
+<!--The <map> element is linked to the image by using the required name attribute. The name attribute must have the same value as the <img>'s usemap attribute'-->
 <map name="birdcage">
 
-	<area shape="rect" coords="0,27,202,153" href="#IMGTREE" alt="Tree">
+	<!--To add a clickable area you need to define it using the <area> element-->
+	<!--You must first define the shape of the clickable area, You can choose one of these following values: rect(Defines a rectangular region), circle(Defines a circular region),poly(Defines a polygonal region), deault(Defines the entire region)-->
+	<!--The coordinates of these shapes must be defined to be able to place the clickable area on the image.-->
+	<!--
+		Shape="rect"
+		The coordinates for shape="rect" come in pairs, one for the x-axis and one for the y-axis.
+		Two coordinates will have to be specified for the rectengular area to be complete.
+
+		    E.X: x, y, x, y.
+
+		Shape="circle
+		To add a circle area, first locate the coordinates of the center of the circle,
+		Then specify the radius of the circle.
+
+		    E.X: x, y, r.
+		
+		Shape="poly"
+		The shape="poly" contains several coordinate points, which creates a shape formed with straight lines (a polygon).
+		This can be used to create any shape.
+		A coordinate must be set for every part of the area that you want to cover.
+
+		    E.X: x, y, x, y, x, y, x, y, x, y, x, y.(Until every coordinate of the desired area has been set)
+-->
+	<area shape="poly" coords="0,27, 130,35, 95,100, 175,60, 215,73, 107,155,  52,155, 0,70" href="#IMGTREE" alt="Tree">
 	<area shape="rect" coords="87,202,151,315" href="#IMGBIRDCAGE" alt="Birdcage">
 	<area shape="circle" coords="268,213,20" href="#IMGBIRD" alt="Bird">
+	<area shape="circle" coords="331,190,20" href="#IMGBIRD" alt="Bird">
+	<!--A clickable area can also trigger a JavaScript function.
+	Add a click event to the <area> element to execute a JavaScript function-->
+	<area shape="rect" coords="151,251,180,292" href="#asfasfd" alt="" onclick="Bird_Alert()">
 
 </map>
 
+<script>
+	function Bird_Alert(){
+		alert("You clicked the birdcage door!");
+	}
+</script>
+
 <br><br><br><br><br><br><br><br><br><br>
+
+<!---->
 <img id="IMGTREE" src="images/Tree.jpg" alt="Tree" style="width: 300px;height: 300px;"><br>
 <img id="IMGBIRDCAGE" src="images/birdcage.jpg" alt="Birdcage" style="width: 300px;height: 300px;"><br>
 <img id="IMGBIRD" src="images/bird.jpg" alt="Bird" style="width: 300px;height: 300px;"><br>
 
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
