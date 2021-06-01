@@ -1,4 +1,6 @@
-body {background-color: pink;}
+body {
+    background-color: pink;
+}
 
 h1 {
 
@@ -18,3 +20,33 @@ p {
     /*The margin propertie defines a margin(space) outside the border*/
     margin: 100px;
 }
+
+
+/*The a:link propertie allows the user to change the looks of a regualar unvisted link*/
+/*The a:visited propertie allows the user to change the looks of a link that had already been visted*/
+/*The a:hover propertie allows the user to change the looks of a link that is being hoverd over*/
+/*The a:active propertie allows the user to change the looks of a link that is active(being clicked on)*/
+
+a:visited, a:link {
+    color: white;
+    text-decoration: none;
+    background-color: purple;
+    padding: 15px 25px;
+    text-align: center;
+    display: inline-block;
+}
+
+
+a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: blue;
+}
+
+
+a:active {
+    color: white;
+    text-decoration: none;
+    background-color: blue;
+}
+

@@ -9,12 +9,16 @@
 <p>This is a paragraph</p>
 <p>This is another paragraph</p>
 
-<a href="index.html"><img src="images/home.png" alt="Home" style="width: 40px; height: 40px;"></a>
+<a href="index.html" title="Home"><img src="images/home.png" alt="Home" style="width: 40px; height: 40px;"></a>
 
 <a href="csstestinternal.html">csstestinternal</a>
 <a href="csstestexternal.html">csstestexternal</a>
 
 <p title="yes, it is indeed red" style="color: red;">This text is red</p>
+
+<a href="#CH1">Jump to Chapter 1 - Images</a>
+<a href="#CH2">Jump to Chapter 2 - Image Maps</a>
+
 <h1 style="font-size: 100px;">Learning</h1>
 <h1>Title</h1>
 <p>The detalis of said tital</p>
@@ -133,6 +137,57 @@
 <!--To use an HTML button javascript code must be added, javascript allows specifing what happens at certain events, such as a click of a button-->
 <button onclick="document.location='index.html'">Home</button>
 
+<br>
+
+<a href="index.html" title="Home Button">Home</a>
+
+<br><br>
+
+
+<!--The id attribute is used to define a bookmark in a page,
+The user can use the href attribute to link to the bookmark-->
+<h1 id="CH1">Bookmark Test</h1>
+<h2>Chapter 1 - Images</h2>
+
+<br><br><br>
+
+<!--The src attribute specifies the path(URL) to the image,
+The alt attribute provides an altarnate text for an image, if the user for some reason cannot view the image(because of a slow connection, an error in the src attribute, or if the user uses a screen reader), the attribute text will be displayed.  -->
+<!--The user can use both the "width,height" and "style" attributes to change the size of an image, however, it is suggested to use the style element in order to prevent style sheets from changing the size of images.-->
+<img src="images/04-nature_721703848.jpg" alt="plant" style="width: 200px;height: 140px;">
+<img src="images/9b3b22ca-d065-40a9-b5d8-2296beb8c717.jpeg" alt="sea" style="width: 200px;height: 140px;">
+<img src="images/shutterstock_554314555_copy.jpg" alt="grass" style="width: 200px; height: 140px;">
+
+<br><br><br>
+
+
+<!--The float attribute allows the user to decide on which side the image will be displayed-->
+<p><img src="images/Talk-Icon.png" alt="Talk-Icon" style="float: left; width: 30px;height: 30px;">This is a paragraph with a floating image to its left side</p>
+<p><img src="images/Talk-Icon.png" alt="Talk-Icon" style="float: right; width: 30px;height: 30px;">This is a paragraph with a floating image to its right side</p>
+
+<h2 id="CH2">Chapter 2 Image Maps</h2>
+
+<br><br>
+
+<img src="images/depositphotos_29460297-stock-photo-bird-cage.jpg" alt="birdcage" usemap="#birdcage" style="width: 450px;height: 330px;">
+
+<map name="birdcage">
+
+	<area shape="rect" coords="0,27,202,153" href="#IMGTREE" alt="Tree">
+	<area shape="rect" coords="87,202,151,315" href="#IMGBIRDCAGE" alt="Birdcage">
+	<area shape="circle" coords="268,213,20" href="#IMGBIRD" alt="Bird">
+
+</map>
+
+<br><br><br><br><br><br><br><br><br><br>
+<img id="IMGTREE" src="images/Tree.jpg" alt="Tree" style="width: 300px;height: 300px;"><br>
+<img id="IMGBIRDCAGE" src="images/birdcage.jpg" alt="Birdcage" style="width: 300px;height: 300px;"><br>
+<img id="IMGBIRD" src="images/bird.jpg" alt="Bird" style="width: 300px;height: 300px;"><br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <header>
 
