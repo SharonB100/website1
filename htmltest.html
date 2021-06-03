@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Test</title>
+<link rel="stylesheet" href="css/htmltest.css">
 </head>
 <body style="background-color: rgb(212, 212, 212);">
 <h1>Welcome</h1>
@@ -18,6 +19,9 @@
 
 <a href="#CH1">Jump to Chapter 1 - Images</a>
 <a href="#CH2">Jump to Chapter 2 - Image Maps</a>
+<a href="#CH3">Jump to Chapter 3 - Background Images</a>
+<a href="#CH4">Jump to Chapter 4 - HTML pitcure Element</a>
+<a href="#CH5">Jump to Chapter 5 - HTML Tables</a>
 
 <h1 style="font-size: 100px;">Learning</h1>
 <h1>Title</h1>
@@ -165,7 +169,7 @@ The alt attribute provides an altarnate text for an image, if the user for some 
 <p><img src="images/Talk-Icon.png" alt="Talk-Icon" style="float: left; width: 30px;height: 30px;">This is a paragraph with a floating image to its left side</p>
 <p><img src="images/Talk-Icon.png" alt="Talk-Icon" style="float: right; width: 30px;height: 30px;">This is a paragraph with a floating image to its right side</p>
 
-<h2 id="CH2">Chapter 2 Image Maps</h2>
+<h2 id="CH2">Chapter 2 - Image Maps</h2>
 
 <br>
 
@@ -223,6 +227,220 @@ The alt attribute provides an altarnate text for an image, if the user for some 
 <img id="IMGTREE" src="images/Tree.jpg" alt="Tree" style="width: 300px;height: 300px;"><br>
 <img id="IMGBIRDCAGE" src="images/birdcage.jpg" alt="Birdcage" style="width: 300px;height: 300px;"><br>
 <img id="IMGBIRD" src="images/bird.jpg" alt="Bird" style="width: 300px;height: 300px;"><br>
+
+<br><br><br><br>
+
+<h2 id="CH3">Chapter 3 - background Images</h2>
+
+<!--To add a background image on an HTML element, use the HTML style attribute and the CSS background-image property.-->
+<!--You can also specify the background image in the <style> element, in the <head> section.
+E.G(
+	<style>
+div {
+  background-image: url('img_girl.jpg');
+}
+</style>
+)	
+-->
+<!--By default the background image will repeat itself horizontally and vertically until it reaches the end of the element if the image is smaller then the element-->
+<!--A background image for a <div> element-->
+
+	<p>A background image for a div element:</p>
+<div style="background-image: url('images/04-nature_721703848.jpg');">
+
+	    This is a peragraph with a background image<br>
+		This is a peragraph with a background image<br>
+		This is a peragraph with a background image<br>
+		This is a peragraph with a background image<br>
+		This is a peragraph with a background image<br>
+		This is a peragraph with a background image<br>
+		This is a peragraph with a background image<br>
+		This is a peragraph with a background image<br>
+		This is a peragraph with a background image<br>
+
+
+</div>
+
+<br>
+
+<!--A background image for a <p> element-->
+	<p>A background image for a p element:</p>
+<p style="background-image: url('images/04-nature_721703848.jpg');">
+This is a peragraph with a background image<br>
+This is a peragraph with a background image<br>
+This is a peragraph with a background image<br>
+This is a peragraph with a background image<br>
+This is a peragraph with a background image<br>
+This is a peragraph with a background image<br>
+This is a peragraph with a background image<br>
+This is a peragraph with a background image<br>
+This is a peragraph with a background image<br>
+</p>
+
+<!--To avoid the background image from repeating set the background-repeat property to no-repeat.-->
+<p>A background image that does not repeat:</p>
+<div style="background-image: url('images/04-nature_721703848.jpg'); background-repeat: no-repeat;">
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+<br>
+<!--If you want the background image to cover the entire element, you can set the background-size property to cover.
+Also, to make sure the entire element is always covered, set the background-attachment property to fixed:
+
+This way, the background image will cover the entire element, with no stretching (the image will keep its original proportions)-->
+<p></p>
+<div style="background-image: url('images/9b3b22ca-d065-40a9-b5d8-2296beb8c717.jpeg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+<br>
+
+<!--If you want the background image to stretch to fit the entire element, you can set the background-size property to 100% 100%-->
+<p></p>
+<div style="background-image: url('images/9b3b22ca-d065-40a9-b5d8-2296beb8c717.jpeg'); background-repeat: no-repeat; background-size: 100% 100%; ">
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+<h2 id="CH4">Chpater 4 - The HTML picture Element</h2>
+
+ <!--When to use the Picture Element
+There are two main purposes for the <picture> element:
+
+1. Bandwidth
+If you have a small screen or device, it is not necessary to load a large image file. The browser will use the first <source> element with matching attribute values, and ignore any of the following elements.
+
+2. Format Support
+Some browsers or devices may not support all image formats. By using the <picture> element, you can add images of all formats, and the browser will use the first format it recognizes, and ignore any of the following elements.-->
+
+<!--The HTML <picture> element gives web developers more flexibility in specifying image resources.
+
+The <picture> element contains one or more <source> elements, each referring to different images through the srcset attribute. This way the browser can choose the image that best fits the current view and/or device.
+
+Each <source> element has a media attribute that defines when the image is the most suitable.-->
+
+<!--Note: Always specify an <img> element as the last child element of the <picture> element. The <img> element is used by browsers that do not support the <picture> element, or if none of the <source> tags match.-->
+<picture>
+	<source media="(min-width: 1000px)" srcset="images/neon-background.gif">
+	<source media="(min-width: 800px)" srcset="images/phone-planet-wallpaper.jpg">
+	<img src="images/Tree.jpg" alt="" >
+</picture>
+
+<br><br><br>
+
+<h2 id="CH5">Chapter 5 - HTML Tables</h2>
+
+<!--The <table> tag defines an HTML table.
+
+Each table row is defined with a <tr> tag. Each table header is defined with a <th> tag. Each table data/cell is defined with a <td> tag.
+
+By default, the text in <th> elements are bold and centered.
+
+By default, the text in <td> elements are regular and left-aligned.-->
+<table style="width: 100%;">
+	<tr>
+		<th>FirstName</th>
+		<th>LastName</th>
+		<th>Age</th>
+
+	</tr>
+	<tr>
+		<!--The <td> elements are the data containers of the table.
+        They can contain all sorts of HTML elements; text, images, lists, other tables, etc.-->
+		<td>Sharon</td>
+		<td>B100</td>
+		<td>21</td>
+	</tr>
+	<tr>
+		<td>Joseph</td>
+		<td>Jostar</td>
+		<td>18</td>
+	</tr>
+	<tr>
+		<td>Michael</td>
+		<td>Belozertzev</td>
+		<td>20</td>
+	</tr>
+
+</table>
+
+<br><br><br>
+
+<!--To add a border to a table, use the CSS border property.
+Remember to define borders for both the table and the table cells.
+To let the borders collapse into one border, add the CSS border-collapse property.-->
+
+<!--Cell padding specifies the space between the cell content and its borders.
+If you do not specify a padding, the table cells will be displayed without padding.
+To set the padding, use the CSS padding property-->
+
+<!--By default, table headings are bold and centered.
+To left-align the table headings, use the CSS text-align property.-->
+<table class="bordertest" style="width: 100%;">
+	<tr>
+		<th>FirstName</th>
+		<th>LastName</th>
+		<th>Age</th>
+
+	</tr>
+	<tr>
+		<td>Sharon</td>
+		<td>B100</td>
+		<td>21</td>
+	</tr>
+	<tr>
+		<td>Joseph</td>
+		<td>Jostar</td>
+		<td>18</td>
+	</tr>
+	<tr>
+		<td>Michael</td>
+		<td>Belozertzev</td>
+		<td>20</td>
+	</tr>
+
+</table>
+
+<br><br><br>
+
+<!--Border spacing specifies the space between the cells.
+To set the border spacing for a table, use the CSS border-spacing property.
+If the table has collapsed borders, border-spacing has no effect.-->
+<table class="spacingtest" style="width: 100%;">
+	<tr>
+		<th>FirstName</th>
+		<th>LastName</th>
+		<th>Age</th>
+
+	</tr>
+	<tr>
+		<td>Sharon</td>
+		<td>B100</td>
+		<td>21</td>
+	</tr>
+	<tr>
+		<td>Joseph</td>
+		<td>Jostar</td>
+		<td>18</td>
+	</tr>
+	<tr>
+		<td>Michael</td>
+		<td>Belozertzev</td>
+		<td>20</td>
+	</tr>
+
+</table>
+
+<table style="width: 100%;">
+<tr>
+	<th>Name</th>
+	<th></th>
+</tr>
+</table>
+
+
+
+
+
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>

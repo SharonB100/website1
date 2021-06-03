@@ -1,0 +1,44 @@
+/*
+To add a border to a table, use the CSS border property.
+Remember to define borders for both the table and the table cells.
+To let the borders collapse into one border, add the CSS border-collapse property.
+
+Cell padding specifies the space between the cell content and its borders.
+If you do not specify a padding, the table cells will be displayed without padding.
+To set the padding, use the CSS padding property.
+
+By default, table headings are bold and centered.
+To left-align the table headings, use the CSS text-align property.
+*/
+table.bordertest,
+table.bordertest td,
+table.bordertest th{
+	color: rgb(59, 0, 0); 
+	border: 5px solid rgb(255, 146, 164);
+	border-collapse: collapse;
+    padding: 15px;
+	}
+
+
+table.bordertest th{
+    text-align: left;
+}
+
+/*
+Border spacing specifies the space between the cells.
+To set the border spacing for a table, use the CSS border-spacing property.
+If the table has collapsed borders, border-spacing has no effect.
+*/
+table.spacingtest, table.spacingtest th,table.spacingtest td {
+    border: 15px solid rgb(182, 81, 98);
+    border-spacing: 20px;
+    padding: 15px;
+    font-family:fantasy;
+}
+
+table.spacingtest td{
+    color: purple;
+}
+table.spacingtest th{
+    color: red;
+}
