@@ -42,3 +42,63 @@ table.spacingtest td{
 table.spacingtest th{
     color: red;
 }
+
+table.a,
+table.a td,
+table.a th{
+	color: rgb(59, 0, 0); 
+	border: 5px solid rgb(255, 146, 164);
+	border-collapse: collapse;
+    padding: 15px;
+	}
+
+
+table.a caption{
+	color: rgb(196, 0, 0); 
+	border: 5px solid rgb(255, 146, 164);
+	border-collapse: collapse;
+    padding: 0px;
+}
+
+table.b,
+table.b td,
+table.b th{
+	color: rgb(59, 0, 0); 
+	border: 5px solid rgb(168, 45, 199);
+	border-collapse: collapse;
+    padding: 15px;
+	}
+
+
+table.b caption{
+	color: rgb(173, 0, 196); 
+	border: 5px solid rgb(168, 45, 199);
+	border-collapse: collapse;
+    padding: 0px;
+}
+
+#t01 {
+    width: 100%;
+}
+
+#t01, #t01 th, #t01 td {
+    border: 3px solid rgb(189, 189, 189);
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+/*The :nth-child(n) selector matches every element that is the nth child,
+regardless of type, of its parent.
+
+n can be a number, a keyword, or a formula.*/
+#t01 tr:nth-child(even){
+background-color: rgb(216, 216, 216);
+}
+
+#t01 tr:nth-child(odd){
+background-color: rgb(53, 53, 53);
+color: white;
+}
+#t01 th{
+    background-color: gray;
+}
